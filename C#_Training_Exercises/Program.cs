@@ -1,4 +1,6 @@
-﻿namespace C__Training_Exercises
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace C__Training_Exercises
 {
     internal class Program
     {
@@ -40,15 +42,40 @@
         {
             Console.WriteLine("Welcome to C# World");
 
-            MathOprations mathOprations = new MathOprations( );
-            mathOprations.GetResults( );
+            //MathOprations mathOprations = new MathOprations( );
+            //mathOprations.GetResults( );
 
-            Program program = new Program( );
-            int inputNumber = int.Parse(Console.ReadLine( ));
-            Console.WriteLine(program.CheckEven(inputNumber));
+            //Program program = new Program( );
+            //int inputNumber = int.Parse(Console.ReadLine( ));
+            //Console.WriteLine(program.CheckEven(inputNumber));
 
-            Console.WriteLine("Your average Result is {0} % " , program.GetAverage(12 , 34 , 56));
-            Console.WriteLine(program.CheckPrime(inputNumber));
+            //Console.WriteLine("Your average Result is {0} % " , program.GetAverage(12 , 34 , 56));
+            //Console.WriteLine(program.CheckPrime(inputNumber));
+
+            // Object creation diffrentParameters class 
+
+            DiffrentTYpesParameters diffrentTYpesParameters = new DiffrentTYpesParameters( );
+          string information=  diffrentTYpesParameters.GetFullDEtails( 
+                "Ali Hassan","BS-software engineering",21.1,true);
+            Console.WriteLine(information);
+
+            DiffrentTYpesParameters diffrentTYpesParametersParamtrizedConstructor =
+                new DiffrentTYpesParameters(5000.00,1500.00,3000) ;
+          Boolean isSenior=diffrentTYpesParametersParamtrizedConstructor.CheckSenior( ) ;
+            Console.WriteLine(isSenior ? "Yes Employ is senior":"No you are no senior");
+            Console.WriteLine(diffrentTYpesParametersParamtrizedConstructor.IsManagerLevelEmploy(16));
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
