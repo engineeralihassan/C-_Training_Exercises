@@ -2,24 +2,45 @@
 {
     public class MathOprations
     {
+        /// <summary>
+        /// Adds two integers together and returns the result.
+        /// </summary>
+        /// <param name="number1">The first integer to add.</param>
+        /// <param name="number2">The second integer to add.</param>
+        /// <returns>The sum of number1 and number2.</returns>
         public int Add( int number1 , int number2 )
         {
             return number1 + number2;
         }
 
-        // Function for Subtract 2 numbers
+        /// <summary>
+        /// Subtract two integers together and returns the result.
+        /// </summary>
+        /// <param name="number1">The first integer to subtract.</param>
+        /// <param name="number2">The second integer to subtract.</param>
+        /// <returns>The subtract result  of number1 and number2.</returns>
         public int Subtract( int number1 , int number2 )
         {
             return number1 - number2;
         }
 
-        // Function for Multiply 2 numbers
+        /// <summary>
+        /// Multiply two integers together and returns the result.
+        /// </summary>
+        /// <param name="number1">The first integer to multiply.</param>
+        /// <param name="number2">The second integer to multiply.</param>
+        /// <returns>The Multiply result  of number1 andmultiply.</returns>
         public int Multiply( int number1 , int number2 )
         {
             return number1 * number2;
         }
 
-        // Function for Divide 2 numbers
+        /// <summary>
+        /// Divide two integers together and returns the result.
+        /// </summary>
+        /// <param name="number1">The first integer to divide.</param>
+        /// <param name="number2">The second integer to divide.</param>
+        /// <returns>The divide result  of number1 and number2.</returns>
         public int Divide( int number1 , int number2 )
         {
             return number1 / number2;

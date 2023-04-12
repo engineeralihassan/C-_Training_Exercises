@@ -1,77 +1,54 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace C__Training_Exercises
+﻿namespace C__Training_Exercises
 {
-    class Program
+    internal class Program
     {
-
-        public void CheckEven()
+        public string CheckEven( int number )
         {
-            Console.WriteLine("Enter any Number to check The Number is Even or Odd");
-            int inputNumber = int.Parse(Console.ReadLine());
-            string result = inputNumber % 2 == 0 ? "The given number is Even" : "The given number  is Odd";
-            Console.WriteLine(result);
-        }
-        public int GetAverage()
-        {
-            int marksBook1 = 78, marksBook2 = 67, marksBook3 = 89;
-            int average = (marksBook1 + marksBook2 + marksBook3) / 3;
-            Console.WriteLine("Your average Result is {0} % ", average);
-            return average;
+            string result = number % 2 == 0 ? "The given number is Even" : "The given number  is Odd";
+            return result;
         }
 
-
-        public void CheckPrime()
+        public int GetAverage( params int [] numbers )
         {
-
-
-
-            Boolean isPrime = true;
-            int inputValue;
-            do
+            int totalSum = 0;
+            foreach ( int number in numbers )
             {
-                Console.WriteLine("Please Enter a number to check Prime or Not ");
-                inputValue = int.Parse(Console.ReadLine());
-                for (int i = 2; i <= inputValue - 1; i++)
-                {
-                    if (inputValue % i == 0)
-                    {
-                        isPrime = false;
-                        break;
-                    }
-                }
-                Console.WriteLine(isPrime);
-                if (isPrime)
-                {
-                    Console.Write("Number is prime number");
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.Write("Number is not Prime number");
-                    Console.WriteLine();
-                }
+                totalSum = number + totalSum;
+            }
 
-
-
-            } while (isPrime);
-
-
+            return totalSum / numbers.Length;
         }
 
+        public string CheckPrime( int inputValue )
+        {
+            Boolean isPrime = true;
 
+            for ( int i = 2 ; i <= inputValue - 1 ; i++ )
+            {
+                if ( inputValue % i == 0 )
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+            Console.WriteLine(isPrime);
+            string result = isPrime ? "The given number is Prime" : "The given number is not prime";
+            return result;
+        }
 
-        static void Main(string[] args)
+        private static void Main( string [] args )
         {
             Console.WriteLine("Welcome to C# World");
 
-            MathOprations mathOprations = new MathOprations();
-            mathOprations.GetResults();
+            MathOprations mathOprations = new MathOprations( );
+            mathOprations.GetResults( );
 
-            Program program = new Program();
-            program.CheckEven();
-            Console.WriteLine("Your average Result is {0} % ", program.GetAverage());
-            program.CheckPrime();
+            Program program = new Program( );
+            int inputNumber = int.Parse(Console.ReadLine( ));
+            Console.WriteLine(program.CheckEven(inputNumber));
+
+            Console.WriteLine("Your average Result is {0} % " , program.GetAverage(12 , 34 , 56));
+            Console.WriteLine(program.CheckPrime(inputNumber));
         }
     }
 }
