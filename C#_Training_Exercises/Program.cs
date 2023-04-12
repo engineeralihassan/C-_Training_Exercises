@@ -2,23 +2,24 @@
 
 namespace C__Training_Exercises
 {
-     class Program
+    class Program
     {
-      
-       public void CheckEven()
+
+        public void CheckEven()
         {
             Console.WriteLine("Enter any Number to check The Number is Even or Odd");
             int inputNumber = int.Parse(Console.ReadLine());
             string result = inputNumber % 2 == 0 ? "The given number is Even" : "The given number  is Odd";
             Console.WriteLine(result);
         }
-        public int GetEvarage()
+        public int GetAverage()
         {
             int marksBook1 = 78, marksBook2 = 67, marksBook3 = 89;
             int average = (marksBook1 + marksBook2 + marksBook3) / 3;
             Console.WriteLine("Your average Result is {0} % ", average);
             return average;
         }
+
 
         public void CheckPrime()
         {
@@ -69,7 +70,7 @@ namespace C__Training_Exercises
 
             Program program = new Program();
             program.CheckEven();
-            Console.WriteLine("Your average Result is {0} % ", program.GetEvarage());
+            Console.WriteLine("Your average Result is {0} % ", program.GetAverage());
             program.CheckPrime();
         }
     }
