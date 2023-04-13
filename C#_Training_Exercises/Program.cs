@@ -58,6 +58,8 @@ namespace C__Training_Exercises
           string information=  diffrentTYpesParameters.GetFullDEtails( 
                 "Ali Hassan","BS-software engineering",21.1,true);
             Console.WriteLine(information);
+            int[] numbersArray = diffrentTYpesParameters.GetEvenNumbers(45).ToArray();
+            Console.WriteLine(numbersArray [1]);
 
             DiffrentTYpesParameters diffrentTYpesParametersParamtrizedConstructor =
                 new DiffrentTYpesParameters(5000.00,1500.00,3000) ;

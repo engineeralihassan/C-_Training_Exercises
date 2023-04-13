@@ -54,6 +54,18 @@
             }
             return "You are not managers Level Employ ";
         }
+        public List<int> GetEvenNumbers( int maxNumber )
+        {
+            List<int> evenNumbers = new List<int>( );
+            for ( int i = 0 ; i <= maxNumber ; i++ )
+            {
+                if ( i % 2 == 0 )
+                {
+                    evenNumbers.Add(i);
+                }
+            }
+            return evenNumbers;
+        }
 
         public string GetFullDEtails( string name , string education , double age , Boolean student )
         {
