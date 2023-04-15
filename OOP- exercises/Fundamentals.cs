@@ -2,7 +2,7 @@
 
 namespace OOP__exercises
 {
-    enum Level
+    public enum Level
     {
         Low,
         Medium,
@@ -31,11 +31,11 @@ namespace OOP__exercises
             remainder = dividend % divisor;
         }
 
-        private void PrintArray( in int [] arr )
+        private void PrintArray( in int [] numbersArray )
         {
-            for ( int i = 0 ; i < arr.Length ; i++ )
+            for ( int i = 0 ; i < numbersArray.Length ; i++ )
             {
-                Console.Write($"{arr [i]} ");
+                Console.Write($"{numbersArray [i]} ");
             }
         }
 
@@ -46,11 +46,6 @@ namespace OOP__exercises
                 Console.WriteLine(number);
             }
         }
-        
-        
-       
-   
-    
 
         private static void Main( string [] args )
         {
@@ -92,10 +87,9 @@ namespace OOP__exercises
             // params key word
             fundamentals.PrintNumbers(12 , 45 , 67 , 89 , 56);
             Level myLevel = Level.Medium;
-            int level = (int)Level.Low;
+            int level = ( int ) Level.Low;
             Console.WriteLine(myLevel);
             Console.WriteLine(level);
-
         }
     }
 }
