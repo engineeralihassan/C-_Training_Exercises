@@ -1,7 +1,4 @@
-﻿using System.ComponentModel;
-using System.Diagnostics;
-using System;
-using System.Text;
+﻿using System.Text;
 
 namespace OOP__exercises
 {
@@ -12,29 +9,28 @@ namespace OOP__exercises
         High
     }
 
- 
-
-  
-
-
     public class Fundamentals
     {
         private const int MAX_VALUE = 100;
         private readonly string CONNECTION_STRING;
+
         private Fundamentals()
         {
             this.CONNECTION_STRING = "My name is Ali Hassan i learn c# programing language";
             Console.WriteLine(MAX_VALUE);
         }
+
         public void GetSquare( ref int number )
         {
             number = number * number;
         }
+
         private void Divide( int dividend , int divisor , out int quotient , out int remainder )
         {
             quotient = dividend / divisor;
             remainder = dividend % divisor;
         }
+
         private void PrintArray( in int [] numbersArray )
         {
             for ( int i = 0 ; i < numbersArray.Length ; i++ )

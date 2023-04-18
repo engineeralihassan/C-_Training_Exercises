@@ -7,16 +7,16 @@
         public double bounus;
         public int houseRent;
         public double percentage;
-       public DiffrentTYpesParameters(double salry, double bonus, int rent)
+
+        public DiffrentTYpesParameters( double salry , double bonus , int rent )
         {
             this.houseRent = rent;
-            this.salary=salry;
+            this.salary = salry;
             this.bounus = bonus;
-
         }
-       public DiffrentTYpesParameters()
-        {
 
+        public DiffrentTYpesParameters()
+        {
         }
 
         public double GetPercentage()
@@ -54,6 +54,7 @@
             }
             return "You are not managers Level Employ ";
         }
+
         public List<int> GetEvenNumbers( int maxNumber )
         {
             List<int> evenNumbers = new List<int>( );

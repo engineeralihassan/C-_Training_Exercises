@@ -1,24 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace C__Training_Exercises
+﻿namespace C__Training_Exercises
 {
-
     // C# program to illustrate how to
     // create value tuple using the
     // ValueTuple constructor.
-   
 
-    class GFG
+    internal class GFG
     {
-
         // Main method
-        static public void Main()
+        public static void Main()
         {
-
             // ValueTuple with one element
             ValueTuple<int> ValTpl1 = new ValueTuple<int>(345678);
 
@@ -32,22 +22,20 @@ namespace C__Training_Exercises
                 34 , 23 , new ValueTuple<int>(90));
         }
     }
+
     public class GFG1
     {
-
-        static (int, string, string) TouristDetails()
+        private static (int, string, string) TouristDetails()
         {
             return (384645, "Sophite", "USA");
         }
-
     }
 
     public class Tupples
     {
-        static public void Main()
+        public static void Main()
         {
-
-            // Creating a value tuple with 
+            // Creating a value tuple with
             // zero element using Create method
             var MyTple1 = ValueTuple.Create( );
 
@@ -55,7 +43,7 @@ namespace C__Training_Exercises
             Console.WriteLine("HashCode of a value tuple with " +
                      "zero elements: " + MyTple1.GetHashCode( ));
 
-            // Creating a value tuple 
+            // Creating a value tuple
             var MyTple2 = ValueTuple.Create(56 , 3);
             var MyTple3 = ValueTuple.Create(56 , 45);
 

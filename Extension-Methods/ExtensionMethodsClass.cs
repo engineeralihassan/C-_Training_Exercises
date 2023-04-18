@@ -1,50 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Extension_Methods
+﻿namespace Extension_Methods
 {
-    static class ExtensionMethodsClass
+    internal static class ExtensionMethodsClass
     {
-        public static string GetFullName(this Student  studentClassObject ) 
+        public static string GetFullName( this Student studentClassObject )
         {
-           
-          return  studentClassObject.FirstName + " " + studentClassObject.LastName;
+            return studentClassObject.FirstName + " " + studentClassObject.LastName;
         }
-        public static int GetAge( this  Student  studentClassObject )
+
+        public static int GetAge( this Student studentClassObject )
         {
             DateTime currentDate = DateTime.Today;
 
-
             int age = currentDate.Year - studentClassObject.DateOfBirth.Year;
 
-            return age ;
+            return age;
         }
+
         public static string GetFullName( this Employee employeeClassObject )
         {
-
             return employeeClassObject.name;
         }
+
         public static int GetAge( this Employee employeeClassObject )
         {
-
             return employeeClassObject.age;
         }
-        public static string modify(this string str )
+
+        public static string modify( this string str )
         {
             str = str.Replace("is" , "that");
             return str;
         }
-        public static Boolean IsEven(this int number )
+
+        public static Boolean IsEven( this int number )
         {
             if ( number % 2 == 0 )
             {
                 return true;
             }
-           return false;
+            return false;
         }
     }
 }
