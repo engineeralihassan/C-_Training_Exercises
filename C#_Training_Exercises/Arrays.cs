@@ -22,6 +22,11 @@
             return secondLargest;
         }
 
+        public void PrintSecondLargest( int number )
+        {
+            Console.WriteLine(number);
+        }
+
         public int [] FindCommonElements( int [] array1 , int [] array2 )
         {
             int [] result = new int [array1.Length];
@@ -33,7 +38,6 @@
                 {
                     if ( array1 [i] == array2 [j] )
                     {
-                        // Add the common element to the result array
                         result [index] = array1 [i];
                         index++;
                         break;
@@ -41,6 +45,15 @@
                 }
             }
             return result;
+        }
+
+        public void GetCommonElements( int [] commonArray )
+        {
+            Console.WriteLine("Common elements:");
+            foreach ( int element in commonArray )
+            {
+                Console.Write(element);
+            }
         }
 
         public int GetMaxLength( string [] strArr )
@@ -57,6 +70,12 @@
             return maxLength;
         }
 
+        public void PrintMaxLength( int number )
+        {
+            Console.WriteLine("The length of the " +
+           "longest string is: " + number);
+        }
+
         public int GetSumOfAbsoluteDifference( int [] array1 , int [] array2 )
         {
             int sum = 0;
@@ -65,6 +84,11 @@
                 sum += Math.Abs(array1 [i] - array2 [i]);
             }
             return sum;
+        }
+
+        public void PrintAbslutesum( int number )
+        {
+            Console.WriteLine($"The Abslute sum is : {number}");
         }
 
         public int [] SortArray( int [] array )
@@ -107,6 +131,14 @@
             }
             return sortedArray;
         }
+
+        public void GetSortedArray( int [] sortedArray )
+        {
+            foreach ( int number in sortedArray )
+            {
+                Console.Write(number + " ");
+            }
+        }
     }
 
     public class Arrays
@@ -117,29 +149,18 @@
                     67 , 89 , 45 , 78 , 56 , 34 , 65 };
             Console.WriteLine("Wellcome to the Arrays exercises");
             ArrayPrograms arrayPrograms = new ArrayPrograms( );
-            int secongLargest = arrayPrograms.GetSecondLargerNumber(numbers);
-            Console.WriteLine(secongLargest);
-            // common elements
+            arrayPrograms.PrintSecondLargest(arrayPrograms.GetSecondLargerNumber(numbers));
+
             int [] array = { 3 , 4 , 5 , 7 , 9 };
             int [] array1 = { 4 , 5 , 7 , 9 , 4 };
             int [] commonArray = arrayPrograms.FindCommonElements(array , array1);
-            Console.WriteLine("Common elements:");
-            foreach ( int element in commonArray )
-            {
-                Console.Write(element);
-            }
+            arrayPrograms.GetCommonElements(commonArray);
             string [] strArr = { "Ali Hassan" , "Want to became a " , "good " , "Full stack developer" };
-            int maxLength = arrayPrograms.GetMaxLength(strArr);
-            Console.WriteLine("The length of the " +
-            "longest string is: " + maxLength);
+            arrayPrograms.PrintMaxLength(arrayPrograms.GetMaxLength(strArr));
 
-            int absluteSum = arrayPrograms.GetSumOfAbsoluteDifference(array1 , array);
-            Console.WriteLine(absluteSum);
-            int [] sortedArray = arrayPrograms.SortArray(numbers);
-            foreach ( int number in sortedArray )
-            {
-                Console.Write(number + " ");
-            }
+            arrayPrograms.PrintAbslutesum(arrayPrograms.GetSumOfAbsoluteDifference(array1 , array));
+
+            arrayPrograms.GetSortedArray(arrayPrograms.SortArray(numbers));
         }
     }
 }

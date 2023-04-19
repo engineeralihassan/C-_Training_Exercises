@@ -6,7 +6,7 @@
     <RootNamespace>OOP__exercises</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>OOP__exercises.Second</StartupObject>
+    <StartupObject>OOP__exercises._03_staticMembers</StartupObject>
   </PropertyGroup>
 
 </Project>
