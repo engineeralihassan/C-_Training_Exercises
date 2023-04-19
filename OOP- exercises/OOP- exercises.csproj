@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,7 +6,7 @@
     <RootNamespace>OOP__exercises</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>OOP__exercises._03_staticMembers</StartupObject>
+    <StartupObject>OOP__exercises.AbstactClass</StartupObject>
   </PropertyGroup>
 
 </Project>

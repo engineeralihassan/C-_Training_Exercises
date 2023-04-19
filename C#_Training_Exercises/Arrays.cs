@@ -132,7 +132,7 @@
             return sortedArray;
         }
 
-        public void GetSortedArray( int [] sortedArray )
+        public void PrintSortedArray( int [] sortedArray )
         {
             foreach ( int number in sortedArray )
             {
@@ -160,7 +160,7 @@
 
             arrayPrograms.PrintAbslutesum(arrayPrograms.GetSumOfAbsoluteDifference(array1 , array));
 
-            arrayPrograms.GetSortedArray(arrayPrograms.SortArray(numbers));
+            arrayPrograms.PrintSortedArray(arrayPrograms.SortArray(numbers));
         }
     }
 }

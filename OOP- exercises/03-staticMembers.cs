@@ -102,6 +102,13 @@ namespace OOP__exercises
         
       
     }
+   public class Singleton
+    {
+        private Singleton()
+        {
+            Console.WriteLine("The constructor is running");
+        }
+    }
     class Database
     {
         static string name;
@@ -137,6 +144,28 @@ namespace OOP__exercises
             Console.WriteLine($"Name : {name} Age: {age} ");
         }
     }
+    class Vehicle1
+    {
+        public string make;
+        public int model;
+        public Vehicle1( string make,int model )
+        {
+            this.model = model;
+            this.make = make;
+
+        }
+        public Vehicle1(Vehicle1 e )
+        {
+            this.model = e.model;
+            this.make = e.make;
+
+        }
+        public void GetDetails()
+        {
+            Console.WriteLine($"Model {model} Maker : {make} ");
+
+        }
+    }
 
     public class _03_staticMembers
     {
@@ -145,6 +174,7 @@ namespace OOP__exercises
             Console.WriteLine(Calculator.GetSubtract(23,12));
             Console.WriteLine(Calculator.GetSum(23 , 12));
             Calculator calculator = new Calculator();
+            
             // instance members
             Shap shap = new Shap();
             shap.CalculateArea(23 , 45);
@@ -176,6 +206,12 @@ namespace OOP__exercises
             person2.PrintDetails( );
             Person2 person3 = new Person2(person2);
             person3.PrintDetails( );
+            Vehicle1 vehicle1 = new Vehicle1("Suzuki international",2022);
+            Vehicle1 vehicle2 = new Vehicle1(vehicle1);
+            // privatte constructors
+          //  Singleton singleton = new Singleton( );
+
+
 
 
 
