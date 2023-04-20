@@ -8,7 +8,7 @@
         public string designation;
     }
 
-    internal class VisitingEmploy : Employe
+    public class VisitingEmploy : Employe
     {
         public int salary;
         public int workHours;
@@ -212,13 +212,7 @@
     class AssociateProfessor: Professor
     {
         public string tenure;
-        public void SetDetails( int id , string name , int salry , string tenure )
-        {
-            this.name = name;
-            this.id = id;
-            this.salary = salry;
-            this.tenure = tenure;
-        }
+
         public void PrintDetails()
         {
             Console.WriteLine($"Name {name} designation : Associate-Professor Tenure: {tenure} salary : {salary} ");
@@ -227,13 +221,7 @@
     class AssistantProfessor:AssociateProfessor
     {
         public string tenure;
-        public void SetDetails( int id , string name , int salry , string tenure )
-        {
-            this.name = name;
-            this.id = id;
-            this.salary = salry;
-            this.tenure = tenure;
-        }
+
         public void PrintDetails()
         {
             Console.WriteLine($"Name {name} designation : Assistant-Professor Experience: {tenure} salary : {salary} ");
