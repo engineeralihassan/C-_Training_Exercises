@@ -91,10 +91,9 @@
             Console.WriteLine($"The Abslute sum is : {number}");
         }
 
-        public int [] SortArray( int [] array )
+        public int [] SortArray( int [] array, string choice )
         {
-            Console.WriteLine("press 1 for ascending and 2 for descending order");
-            string choice = Console.ReadLine( );
+         
             int [] sortedArray = new int [array.Length];
             int temp;
             if ( choice == "1" )
@@ -159,8 +158,9 @@
             arrayPrograms.PrintMaxLength(arrayPrograms.GetMaxLength(strArr));
 
             arrayPrograms.PrintAbslutesum(arrayPrograms.GetSumOfAbsoluteDifference(array1 , array));
-
-            arrayPrograms.PrintSortedArray(arrayPrograms.SortArray(numbers));
+            Console.WriteLine("press 1 for ascending and 2 for descending order");
+            string choice = Console.ReadLine( );
+            arrayPrograms.PrintSortedArray(arrayPrograms.SortArray(numbers,choice));
         }
     }
 }

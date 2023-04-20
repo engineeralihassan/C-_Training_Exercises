@@ -16,6 +16,9 @@ namespace OOP__exercises
         {
             Console.WriteLine(GetSum(number1 , number2));
         }
+        ~MathUtility() {
+            Console.WriteLine("The destructor is called");
+        }
 
     }
     public class BankAccount
@@ -56,7 +59,7 @@ namespace OOP__exercises
             Console.WriteLine("Balance: {0:C}" , account.Balance);
         }
     }
-    public class AbstactClass
+    public class staticClass
     {
         private static void Main()
         {
