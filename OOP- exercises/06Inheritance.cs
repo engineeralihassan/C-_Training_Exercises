@@ -1,6 +1,6 @@
 ﻿namespace OOP__exercises
 {
-    internal class Employe
+    public class Employe
     {
         public int EmployId;
         public string name;
@@ -43,6 +43,7 @@
     public class Animal
     {
         public string animalType { get; set; }
+
         public void CheckKingdom()
         {
             Console.WriteLine("The  is belongs to animal Kingdom");
@@ -58,7 +59,8 @@
             return true;
         }
     }
-    class Dog :Animal
+
+    internal class Dog : Animal
     {
         public Boolean IsPet()
         {
@@ -69,60 +71,174 @@
         {
             return false;
         }
-
     }
+
     // Example 2
-    class Vehicl
+    internal class Vehicl
     {
         public string company { get; set; }
         public int model { get; set; }
-
     }
-    class LTV: Vehicl
+
+    internal class LTV : Vehicl
     {
-      public void PrintDetails()
+        public void PrintDetails()
         {
             Console.WriteLine($"This LTV is made by {company} and its model is {model}");
         }
     }
-    class HTV : Vehicl
+
+    internal class HTV : Vehicl
     {
         public void PrintDetails()
         {
             Console.WriteLine($"This HTV is made by {company} and its model is {model}");
         }
     }
+
     /// <summary>
     // Type of inheritance starts from here
     /// </summary>
     // single inheritance
-    class Bank11
+    internal class Bank11
     {
         public string acountType;
         public int acountBalance;
         public string acountHolder;
     }
-    class HabibBank :Bank11
+
+    internal class HabibBank : Bank11
     {
-        public void SetDEtails(string customerName,string acountType, int balance)
+        public void SetDEtails( string customerName , string acountType , int balance )
         {
             this.acountHolder = customerName;
             this.acountType = acountType;
-           this.acountBalance = balance ;
+            this.acountBalance = balance;
         }
 
-        public void Withdraw(int withdraw)
+        public void Withdraw( int withdraw )
         {
-            acountBalance=acountBalance-withdraw;
-
-           
+            acountBalance = acountBalance - withdraw;
         }
-       public void  PrintDEtails()
+
+        public void PrintDEtails()
         {
             Console.WriteLine($"Customer name {acountHolder} Acount-Type {acountType} Total Balance {acountBalance} ");
         }
     }
+    /// <summary>
+    // Hierarchical inheritance in C#
+    // Multilevel inheritance in C#
+    /// </summary>
+    class Shop
+    {
+        public string date;
+        public int totalBill;
+        public int items;
+    }
+    class Alfateh: Shop
+    {
+       
+        public void SetDetails(int items,int bill)
+        {
+            this.date = DateTime.Now.ToString();
+            this.totalBill = bill;
+            this.items = items;
+        }
+        public void PrintDetails( )
+        {
+            Console.WriteLine($"Date {date} Bill {totalBill} Items {items}");
 
+        }
+    }
+    class RainBow : Shop
+    {
+      
+        public void SetDetails( int items , int bill )
+        {
+            this.date = DateTime.Now.ToString( );
+            this.totalBill = bill;
+            this.items = items;
+        }
+        public void PrintDetails()
+        {
+            Console.WriteLine($"Date {date} Bill {totalBill} Items {items}");
+
+        }
+    }
+    class Emporium : Shop
+    {
+        public void SetDetails( int items , int bill )
+        {
+            this.date = DateTime.Now.ToString( );
+            this.totalBill = bill;
+            this.items = items;
+        }
+        public void PrintDetails()
+        {
+            Console.WriteLine($"Date {date} Bill {totalBill} Items {items}");
+
+        }
+    }
+    /// <summary>
+    // Multilevel inheritance in C#
+    /// </summary>
+   class FacultyMember
+    {
+        public string name;
+        public int id;
+        public int salary;
+        public int CalculateSalary(int alounces, int fewlPrice )
+        {
+            salary= salary+ alounces+ fewlPrice;
+            return salary;
+        }
+    }
+    class Professor:FacultyMember
+    {
+        public string tenure;
+        public void SetDetails(int id,string name,int  salry,string tenure)
+        {
+            this.name= name;
+            this.id= id;
+            this.salary= salry;
+            this.tenure= tenure;
+        }
+        public void PrintDetails()
+        {
+            Console.WriteLine($"Name {name} designation : Assistant-Professor Contract: {tenure} salary : {salary} ") ;
+        }
+    }
+    class AssociateProfessor: Professor
+    {
+        public string tenure;
+        public void SetDetails( int id , string name , int salry , string tenure )
+        {
+            this.name = name;
+            this.id = id;
+            this.salary = salry;
+            this.tenure = tenure;
+        }
+        public void PrintDetails()
+        {
+            Console.WriteLine($"Name {name} designation : Associate-Professor Tenure: {tenure} salary : {salary} ");
+        }
+    }
+    class AssistantProfessor:AssociateProfessor
+    {
+        public string tenure;
+        public void SetDetails( int id , string name , int salry , string tenure )
+        {
+            this.name = name;
+            this.id = id;
+            this.salary = salry;
+            this.tenure = tenure;
+        }
+        public void PrintDetails()
+        {
+            Console.WriteLine($"Name {name} designation : Assistant-Professor Experience: {tenure} salary : {salary} ");
+        }
+    }
     public class _06Inheritance
     {
         private static void Main()
@@ -136,33 +252,41 @@
             {
                     new VisitingEmploy{EmployId=1,name="Ali Hassan",age=21,designation="Senior super visor",salary=23000,workHours=8},
                     new VisitingEmploy{EmployId=2,name="Ali Hassan",age=21,designation="Senior super visor",salary=23000,workHours=8},
-
                     new VisitingEmploy{EmployId=3,name="Ali Hassan",age=21,designation="Senior super visor",salary=23000,workHours=8},
                     new VisitingEmploy{EmployId=4,name="Ali Hassan",age=21,designation="Senior super visor",salary=23000,workHours=8},
                     new VisitingEmploy{EmployId=5,name="Ali Hassan",age=21,designation="Senior super visor",salary=23000,workHours=8},
             };
             employ.PrintEmployees(employsArray);
             // Example 1 object
-            Dog dog = new Dog();
+            Dog dog = new Dog( );
             dog.animalType = "Dangrouse";
             dog.CheckKingdom( );
             Console.WriteLine(dog.IsPet( ));
             Console.WriteLine(dog.IsBull( ));
-            // Example 2 object 
-            LTV lTV = new LTV();
+            // Example 2 object
+            LTV lTV = new LTV( );
             lTV.company = "BMW";
             lTV.model = 2012;
             lTV.PrintDetails( );
             // single inheritance object
-            HabibBank habibBank = new HabibBank();
+            HabibBank habibBank = new HabibBank( );
             habibBank.SetDEtails("Ali Hassan" , "Deposit" , 23000);
             habibBank.Withdraw(4500);
             habibBank.PrintDEtails( );
-
+            // Hierarchical inheritance
+            Alfateh alfateh = new Alfateh( );
+            alfateh.SetDetails(12 , 4500);
+            alfateh.PrintDetails( );
+            Emporium emporium = new Emporium( );
+            emporium.SetDetails(5 , 6700);
+            emporium.PrintDetails( );
+            // Multi-level inheritance
+            AssociateProfessor associateProfessor = new AssociateProfessor( );
+            associateProfessor.SetDetails(1 , "Asim muneer" , 45000, "2years");
+            associateProfessor.CalculateSalary(5000 , 4000);
+            associateProfessor.PrintDetails( );
 
             
-
-
 
         }
     }
