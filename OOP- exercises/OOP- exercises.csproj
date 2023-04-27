@@ -6,7 +6,7 @@
     <RootNamespace>OOP__exercises</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>OOP__exercises._10_Abstraction</StartupObject>
+    <StartupObject>OOP__exercises._09_Properties</StartupObject>
   </PropertyGroup>
 
 </Project>

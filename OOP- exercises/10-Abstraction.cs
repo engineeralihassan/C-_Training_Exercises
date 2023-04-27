@@ -130,6 +130,8 @@ namespace OOP__exercises
             student.FavorateGame = "Cricket";
             Console.WriteLine(student.favouriteGame);
             Lion lion = new Lion();
+
+            
             lion.Sleep( );
             lion.kingDom = "Dandrous";
             Console.WriteLine(lion.kingDom);
