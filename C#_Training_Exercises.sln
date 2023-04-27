@@ -5,9 +5,9 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C#_Training_Exercises", "C#_Training_Exercises\C#_Training_Exercises.csproj", "{47E992EA-DCEA-4DE9-87B2-86832E164EA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP- exercises", "OOP- exercises\OOP- exercises.csproj", "{5AE39649-6DF3-4A39-A736-8612AFFEF646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP- exercises", "OOP- exercises\OOP- exercises.csproj", "{5AE39649-6DF3-4A39-A736-8612AFFEF646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extension-Methods", "Extension-Methods\Extension-Methods.csproj", "{ECF6E8AA-2F4E-474C-A4B3-D04CC57A7635}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extension-Methods", "Extension-Methods\Extension-Methods.csproj", "{ECF6E8AA-2F4E-474C-A4B3-D04CC57A7635}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
