@@ -55,9 +55,9 @@ namespace OOP__exercises
     {
         static void Main( string [] args )
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Wellcome to the C# Encapsulations world");
             Employ employ = new Employ(123456789098);
-            employ.SetDetails(12 , "Ali Hassan");
+            employ.SetDetails(12 , "Amjad sabri");
             employ.PrintDetails( );
             employ.PrintCnic( );
             employ.PrintBalance( );
