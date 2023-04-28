@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP__exercises
 {
-    // simple  operators overloading
+    // simple/ binary   operators overloading
     class Operators
     {
         public string firstName;
@@ -37,6 +37,11 @@ namespace OOP__exercises
             classObject.number2 = -classObject.number2;
             return classObject;
         }
+        public void Print()
+        {
+            Console.WriteLine("Number1 = " + number1);
+            Console.WriteLine("Number2 = " + number2);
+        }
 
     }
 
@@ -55,11 +60,10 @@ namespace OOP__exercises
             // unary operators 
             Calculator1 calculator1 = new Calculator1(12 , 45);
             calculator1 = -calculator1;
-            Console.WriteLine(calculator1.number1);
-            Console.WriteLine(calculator1.number2);
+            calculator1.Print( );
             calculator1 = -calculator1;
-            Console.WriteLine(calculator1.number1);
-            Console.WriteLine(calculator1.number2);
+            calculator1.Print( );
+
 
 
 
