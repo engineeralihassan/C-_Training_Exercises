@@ -26,6 +26,9 @@
             parent1.Show( );
             // we also call the parent class method by casting
             ( ( Base ) parent1 ).Show( );
+
+            
+
         }
     }
 }

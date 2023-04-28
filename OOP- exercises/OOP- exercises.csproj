@@ -6,7 +6,7 @@
     <RootNamespace>OOP__exercises</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>OOP__exercises._15_Indexers</StartupObject>
+    <StartupObject>OOP__exercises.SealedMain</StartupObject>
   </PropertyGroup>
 
 </Project>
