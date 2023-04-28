@@ -12,7 +12,7 @@ namespace OOP__exercises
         string name = "Ali Hassan";
         private string roll;
         private static int age;
-        public static int MyProperty
+        public static int Age
         {
             set
             {
@@ -24,7 +24,7 @@ namespace OOP__exercises
             }
 
         }
-        public string adress { set; get; }
+        public string address { set; get; }
 
         public int Id
         {
@@ -68,10 +68,10 @@ namespace OOP__exercises
             {
                 Employ2 employ = new Employ2( );
                 employ.Id = 12;
-                employ.adress = "Renala khurd okara";
-                Console.WriteLine(employ.adress);
-                Employ2.MyProperty = 12;
-                Console.WriteLine(Employ2.MyProperty);
+                employ.address = "Renala khurd okara";
+                Console.WriteLine(employ.address);
+                Employ2.Age = 12;
+                Console.WriteLine(Employ2.Age);
 
             }
         }
