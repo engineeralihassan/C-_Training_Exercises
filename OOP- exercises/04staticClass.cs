@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP__exercises
+﻿namespace OOP__exercises
 {
     public class MathUtility
     {
-        public static int GetSum(int number1, int number2 )
+        public static int GetSum( int number1 , int number2 )
         {
             return number1 + number2;
         }
-        public static void  PrintSum( int number1 , int number2 )
+
+        public static void PrintSum( int number1 , int number2 )
         {
             Console.WriteLine(GetSum(number1 , number2));
         }
-        ~MathUtility() {
+
+        ~MathUtility()
+        {
             Console.WriteLine("The destructor is called");
         }
-
     }
+
     public class BankAccount
     {
         private double balance;
@@ -59,6 +56,7 @@ namespace OOP__exercises
             Console.WriteLine("Balance: {0:C}" , account.Balance);
         }
     }
+
     public class staticClass
     {
         private static void Main()
@@ -72,8 +70,6 @@ namespace OOP__exercises
 
             AccountManager.DisplayAccountDetails(account1);
             AccountManager.DisplayAccountDetails(account2);
-
         }
-
     }
 }

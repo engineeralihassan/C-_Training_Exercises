@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP__exercises
+﻿namespace OOP__exercises
 {
     public class Employ2
     {
-        int id;
-        string name = "Ali Hassan";
+        private int id;
+        private string name = "Ali Hassan";
         private string roll;
         private static int age;
+
         public static int Age
         {
             set
@@ -22,13 +17,12 @@ namespace OOP__exercises
             {
                 return age;
             }
-
         }
+
         public string address { set; get; }
 
         public int Id
         {
-
             set
             {
                 if ( value < 0 )
@@ -41,13 +35,12 @@ namespace OOP__exercises
                 }
             }
 
-
-
             get
             {
                 return this.id;
             }
         }
+
         public string Name
         {
             get
@@ -55,6 +48,7 @@ namespace OOP__exercises
                 return this.name;
             }
         }
+
         public string rollNo
         {
             set
@@ -62,6 +56,7 @@ namespace OOP__exercises
                 this.roll = value;
             }
         }
+
         public class _09_Encapsolations
         {
             private static void Main()
@@ -72,8 +67,7 @@ namespace OOP__exercises
                 Console.WriteLine(employ.address);
                 Employ2.Age = 12;
                 Console.WriteLine(Employ2.Age);
-
             }
         }
-        }
+    }
 }

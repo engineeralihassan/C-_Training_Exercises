@@ -17,14 +17,17 @@ namespace OOP__exercises
 
         int GetArea();
     }
-    // Example 2 
-    interface vehicle
-    {
-        int ChangeGear(int gear);
-        int IncreaseSpeed(int speed);
-        int DecreaseSpeed(int speed);
 
+    // Example 2
+    internal interface vehicle
+    {
+        int ChangeGear( int gear );
+
+        int IncreaseSpeed( int speed );
+
+        int DecreaseSpeed( int speed );
     }
+
     public class Place : IShap
     {
         public int length;
@@ -48,59 +51,72 @@ namespace OOP__exercises
             return this.area;
         }
     }
+
     public class Traler : vehicle
     {
-        int speed;
-        int gear;
-        public void SetProperties(int gear, int speed)
+        private int speed;
+        private int gear;
+
+        public void SetProperties( int gear , int speed )
         {
             this.gear = gear;
             this.speed = speed;
         }
+
         public int ChangeGear( int gear )
         {
             this.gear = gear;
             return this.gear;
         }
-       public int IncreaseSpeed( int speed )
+
+        public int IncreaseSpeed( int speed )
         {
-            this.speed=this.speed+speed;
+            this.speed = this.speed + speed;
             return this.speed;
         }
-       public int DecreaseSpeed( int speed )
+
+        public int DecreaseSpeed( int speed )
         {
-            this.gear=this.speed-speed;
+            this.gear = this.speed - speed;
             return this.speed;
         }
+
         public void PrintStates()
         {
-            Console.WriteLine("The current speed is : {0} and Gear is {1}",this.speed,this.gear);
+            Console.WriteLine("The current speed is : {0} and Gear is {1}" , this.speed , this.gear);
         }
     }
+
     /// <summary>
     /// Implicit interfaces
     /// </summary>
-    /// 
-    interface interface1
+    ///
+    internal interface interface1
     {
         void show();
-        void GetAge( int age );
 
+        void GetAge( int age );
     }
-    interface interface2
+
+    internal interface interface2
     {
         void show();
+
         void GetAge( int age , double birthYear );
     }
-    interface interface3
+
+    internal interface interface3
     {
         void show();
+
         void GetAge( int age , int birthYear );
     }
-    interface interface4
+
+    internal interface interface4
     {
         void show();
     }
+
     public class Parent : interface1, interface2, interface3
     {
         public void show()
@@ -112,16 +128,18 @@ namespace OOP__exercises
         {
             Console.WriteLine("This is the Method of interface 2");
         }
+
         public void GetAge( int age , int birthYear )
         {
             Console.WriteLine("This is the Method of interface 3");
         }
+
         public void GetAge( int age )
         {
             Console.WriteLine("This is the Method of interface 1");
         }
-
     }
+
     public class _08_Interfaces
     {
         private static void Main()
@@ -131,7 +149,7 @@ namespace OOP__exercises
             place.CalculateArea( );
             Console.WriteLine("The area is : {0}" , place.GetArea( ));
             // Example 2
-            Traler traler = new Traler();
+            Traler traler = new Traler( );
             traler.SetProperties(2 , 60);
             traler.PrintStates( );
             traler.ChangeGear(4);
@@ -143,11 +161,10 @@ namespace OOP__exercises
             parent.GetAge(12);
             parent.GetAge(12 , 34);
             parent.GetAge(12 , 45.7);
-            // Question : 
+            // Question :
             interface2 interface2obj = new Parent( );
             interface2obj.show( );
-            // question if we want to make the class methos with same signature 
-
+            // question if we want to make the class methos with same signature
         }
     }
 }

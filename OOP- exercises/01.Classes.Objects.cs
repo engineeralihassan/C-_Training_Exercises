@@ -123,7 +123,7 @@
                                                                                                 new Employees { name="Ali Hassan8",salary=25000,hireDate=new DateTime(2000,12,13) },
                                                                                                           new Employees { name="Ali Hassan9",salary=25000,hireDate=new DateTime(2001,12,13) },
             };
-            foreach (var item in employees)
+            foreach ( var item in employees )
             {
                 item.Details( );
             }

@@ -126,47 +126,19 @@
             Console.WriteLine($"Customer name {acountHolder} Acount-Type {acountType} Total Balance {acountBalance} ");
         }
     }
+
     /// <summary>
     // Hierarchical inheritance in C#
     // Multilevel inheritance in C#
     /// </summary>
-    class Shop
+    internal class Shop
     {
         public string date;
         public int totalBill;
         public int items;
     }
-    class Alfateh: Shop
-    {
-       
-        public void SetDetails(int items,int bill)
-        {
-            this.date = DateTime.Now.ToString();
-            this.totalBill = bill;
-            this.items = items;
-        }
-        public void PrintDetails( )
-        {
-            Console.WriteLine($"Date {date} Bill {totalBill} Items {items}");
 
-        }
-    }
-    class RainBow : Shop
-    {
-      
-        public void SetDetails( int items , int bill )
-        {
-            this.date = DateTime.Now.ToString( );
-            this.totalBill = bill;
-            this.items = items;
-        }
-        public void PrintDetails()
-        {
-            Console.WriteLine($"Date {date} Bill {totalBill} Items {items}");
-
-        }
-    }
-    class Emporium : Shop
+    internal class Alfateh : Shop
     {
         public void SetDetails( int items , int bill )
         {
@@ -174,42 +146,78 @@
             this.totalBill = bill;
             this.items = items;
         }
+
         public void PrintDetails()
         {
             Console.WriteLine($"Date {date} Bill {totalBill} Items {items}");
-
         }
     }
+
+    internal class RainBow : Shop
+    {
+        public void SetDetails( int items , int bill )
+        {
+            this.date = DateTime.Now.ToString( );
+            this.totalBill = bill;
+            this.items = items;
+        }
+
+        public void PrintDetails()
+        {
+            Console.WriteLine($"Date {date} Bill {totalBill} Items {items}");
+        }
+    }
+
+    internal class Emporium : Shop
+    {
+        public void SetDetails( int items , int bill )
+        {
+            this.date = DateTime.Now.ToString( );
+            this.totalBill = bill;
+            this.items = items;
+        }
+
+        public void PrintDetails()
+        {
+            Console.WriteLine($"Date {date} Bill {totalBill} Items {items}");
+        }
+    }
+
     /// <summary>
     // Multilevel inheritance in C#
     /// </summary>
-   class FacultyMember
+    internal class FacultyMember
     {
         public string name;
         public int id;
         public int salary;
-        public int CalculateSalary(int alounces, int fewlPrice )
+
+        public int CalculateSalary( int alounces , int fewlPrice )
         {
-            salary= salary+ alounces+ fewlPrice;
+            salary = salary + alounces + fewlPrice;
             return salary;
         }
     }
-    class Professor:FacultyMember
+
+    internal class Professor : FacultyMember
     {
         public string tenure;
-        public void SetDetails(int id,string name,int  salry,string tenure)
+
+        public void SetDetails( int id , string name , int salry , string tenure )
         {
-            this.name= name;
-            this.id= id;
-            this.salary= salry;
-            this.tenure= tenure;
+            this.name = name;
+            this.id = id;
+            this.salary = salry;
+            this.tenure = tenure;
         }
+
         public void PrintDetails()
         {
-            Console.WriteLine($"Name {name} designation : Assistant-Professor Contract: {tenure} salary : {salary} ") ;
+            Console.WriteLine($"Name {name} designation : Assistant-Professor Contract: {tenure} salary : {salary} ");
         }
     }
-    class AssociateProfessor: Professor
+
+    internal class AssociateProfessor : Professor
     {
         public string tenure;
 
@@ -218,7 +226,8 @@
             Console.WriteLine($"Name {name} designation : Associate-Professor Tenure: {tenure} salary : {salary} ");
         }
     }
-    class AssistantProfessor:AssociateProfessor
+
+    internal class AssistantProfessor : AssociateProfessor
     {
         public string tenure;
 
@@ -227,6 +236,7 @@
             Console.WriteLine($"Name {name} designation : Assistant-Professor Experience: {tenure} salary : {salary} ");
         }
     }
+
     public class _06Inheritance
     {
         private static void Main()
@@ -270,12 +280,9 @@
             emporium.PrintDetails( );
             // Multi-level inheritance
             AssociateProfessor associateProfessor = new AssociateProfessor( );
-            associateProfessor.SetDetails(1 , "Asim muneer" , 45000, "2years");
+            associateProfessor.SetDetails(1 , "Asim muneer" , 45000 , "2years");
             associateProfessor.CalculateSalary(5000 , 4000);
             associateProfessor.PrintDetails( );
-
-            
-
         }
     }
 }

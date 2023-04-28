@@ -1,36 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP__exercises
+﻿namespace OOP__exercises
 {
     // Abstract classes
-    abstract class Person3
+    internal abstract class Person3
     {
         public int age;
         public string name;
         public int id;
         public string favouriteGame;
+
         // abstract properties
         public abstract string FavorateGame { get; set; }
 
         // Abstact methods
 
         public abstract void PrintDetails();
-        public abstract int CalculateSum( int bumber1 , int number2 );
 
+        public abstract int CalculateSum( int bumber1 , int number2 );
     }
-    class Student5 : Person3
+
+    internal class Student5 : Person3
     {
         public int grade;
         public string rollno;
         public string favorateGame;
 
-        public override string FavorateGame {
+        public override string FavorateGame
+        {
             set
             {
                 this.favouriteGame = value;
@@ -40,53 +35,61 @@ namespace OOP__exercises
                 return this.favouriteGame;
             }
         }
-           
-        public Student5( int age , int id , string name, string rollno, int grade)
+
+        public Student5( int age , int id , string name , string rollno , int grade )
         {
             this.age = age;
             this.name = name;
-                
+
             this.id = id;
             this.grade = grade;
             this.rollno = rollno;
-            
-
         }
+
         public override int CalculateSum( int number1 , int number2 )
         {
             return number2 + number1;
         }
+
         public override void PrintDetails()
         {
             Console.WriteLine($"Id :  {id} Name :" +
                 $" {name} Age : {age} Roll No : {rollno} Grade: {grade}");
         }
+
         public void PrintSum()
         {
-            Console.WriteLine("The sum is : {0}", this.CalculateSum(12,45));
+            Console.WriteLine("The sum is : {0}" , this.CalculateSum(12 , 45));
         }
-
     }
+
     // Example 2
-    abstract class Animal1
+    internal abstract class Animal1
     {
         public abstract void Sleep();
+
         public abstract void Eat();
-        // abstract poperties 
+
+        // abstract poperties
         public abstract string kingDom { get; set; }
     }
-     class Lion:Animal1
+
+    internal class Lion : Animal1
     {
         public string kingdom;
+
         public override void Eat()
         {
             Console.WriteLine("The Lion is Eating Meet");
         }
+
         public override void Sleep()
         {
             Console.WriteLine("The Lion is Sleeping");
         }
-        public override string kingDom {
+
+        public override string kingDom
+        {
             set
             {
                 this.kingdom = value;
@@ -96,19 +99,20 @@ namespace OOP__exercises
                 return this.kingdom;
             }
         }
-
-
     }
-    class Girafe : Animal1
+
+    internal class Girafe : Animal1
     {
         public override void Eat()
         {
             Console.WriteLine("The Giraffe is Eating Meet");
         }
+
         public override void Sleep()
         {
             Console.WriteLine("The Giraffe is Sleeping");
         }
+
         public override string kingDom
         {
             set
@@ -121,23 +125,20 @@ namespace OOP__exercises
             }
         }
     }
+
     public class _10_Abstraction
     {
-      public static void Main()
+        public static void Main()
         {
             Student5 student = new Student5(21 , 1 , "Ali Hassan" , "5063" , 78);
             student.PrintSum( );
             student.FavorateGame = "Cricket";
             Console.WriteLine(student.favouriteGame);
-            Lion lion = new Lion();
+            Lion lion = new Lion( );
 
-            
             lion.Sleep( );
             lion.kingDom = "Dandrous";
             Console.WriteLine(lion.kingDom);
         }
-      
-
-        
     }
 }
