@@ -35,7 +35,7 @@ namespace OOP__exercises
 
 
     }
-    class B2:A2
+    class B2:A1
     {
         public sealed override int CalculateSum(int number1, int number2)
         {
@@ -49,6 +49,7 @@ namespace OOP__exercises
         //{
         //    return number1 + number2;
         //}
+
 
     }
 
