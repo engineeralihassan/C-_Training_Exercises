@@ -1,4 +1,4 @@
-﻿using System.Text;
+﻿ using System.Text;
 
 namespace OOP__exercises
 {
@@ -90,6 +90,7 @@ namespace OOP__exercises
             int level = ( int ) Level.Low;
             Console.WriteLine(myLevel);
             Console.WriteLine(level);
+
         }
     }
 }

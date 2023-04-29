@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOP__exercises
 {
-    public  class SealedClass
+    public sealed  class SealedClass
     {
         private int id, age;
         private string name;

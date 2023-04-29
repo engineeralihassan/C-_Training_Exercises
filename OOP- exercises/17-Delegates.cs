@@ -31,8 +31,8 @@ namespace OOP__exercises
             Delegates delegates = new Delegates( );
             delegate1 obj = new delegate1(delegates.CalculateMultiply);
             Console.WriteLine(obj(12 , 45));
-            obj = delegates.Calculatedivision;
-            Console.WriteLine(obj(12 , 34));
+            
+            
 
 
 
