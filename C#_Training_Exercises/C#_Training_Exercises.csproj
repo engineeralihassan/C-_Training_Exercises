@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,7 +6,7 @@
     <RootNamespace>C__Training_Exercises</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>C__Training_Exercises.Arrays</StartupObject>
+    <StartupObject>C__Training_Exercises.BreakContinue</StartupObject>
   </PropertyGroup>
 
 </Project>
