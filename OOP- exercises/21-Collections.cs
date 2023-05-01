@@ -94,6 +94,39 @@ namespace OOP__exercises
         }
 
     }
+    // None Genaric Stack
+    class Stack1
+    {
+        private Stack stack = new Stack();
+        public void AddItem(dynamic item)
+        {
+            stack.Push(item);
+        }
+        public void DeleteItem()
+        {
+            stack.Pop();
+        }
+        public void GetTop()
+        {
+            stack.Peek();
+        }
+        public void IsContains(dynamic item)
+        {
+            string isContain = stack.Contains(item) ? "Yes" : "No";
+            Console.WriteLine("The Item is contains is the Stack : {0} ", isContain);
+        }
+
+        public void PrintItems()
+        {
+            foreach (object item in stack)
+            {
+                Console.WriteLine(item);
+
+            }
+
+        }
+
+    }
     public class Collections
     {
         private static void Main()
@@ -148,6 +181,55 @@ namespace OOP__exercises
             sortList1.AddItem("class", "BSSE-A");
             sortList1.AddItem("phone", 03132345678);
             sortList1.PrintItems();
+
+            // Stack 
+
+            Stack1 stack = new Stack1();
+            stack.AddItem("Ali Hassan");
+            stack.AddItem("BSSE-A");
+            stack.AddItem(5063);
+            stack.AddItem("BS-software engineering");
+            stack.AddItem(03133324617);
+            stack.AddItem("alihassan@gmail.com");
+            stack.IsContains(5063);
+
+            // Queue
+            Queue queue = new Queue();
+            //Adding item to the queue using the Enqueue method
+            queue.Enqueue(101);
+            queue.Enqueue("Hello");
+            queue.Enqueue(3.14f);
+            queue.Enqueue(true);
+            queue.Enqueue(67.8);
+            queue.Enqueue('A');
+            //Printing the queue items using foreach loop
+            Console.WriteLine($"All Queue Elements: Count {queue.Count}");
+            foreach (var item in queue)
+            {
+                Console.Write($"{item} ");
+            }
+            //Removing and Returning an item from the queue using the Dequeue method
+            Console.WriteLine($"\n\nDeleted Element: {queue.Dequeue()}");
+            //Printing item after removing the first added item
+            Console.WriteLine($"\nAll Queue Elements After Deletion: Count {queue.Count}");
+            foreach (var item in queue)
+            {
+                Console.Write($"{item} ");
+            }
+            //Printing Items After Clearing the Queue
+            queue.Clear();
+            Console.WriteLine($"\n\nQueue Elements After Clear Operation: Count {queue.Count}");
+            foreach (var item in queue)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.ReadKey();
+
+            //Removing and Returning an item from the queue using the Dequeue method
+            Console.WriteLine($"\n\nDeleted Element: {queue.Dequeue()}");
+            //Printing item after removing the first added item
+            Console.WriteLine($"\nAll Queue Elements After Deletion: Count {queue.Count}");
+
 
 
 
