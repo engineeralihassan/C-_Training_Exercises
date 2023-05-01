@@ -96,7 +96,21 @@
             Console.WriteLine($"Iterating Dictionary Using AsParallel().ForAll Method");
             dictionaryCountries.AsParallel()
             .ForAll(entry => Console.WriteLine(entry.Key + " : " + entry.Value));
-        }
+            // Create a new stack of integers
+            Stack<int> stack = new Stack<int>();
 
+            // Add 5 items to the stack
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+
+            // Print the items in the stack using a foreach loop
+            foreach (int item in stack)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }
