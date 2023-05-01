@@ -13,10 +13,12 @@ namespace OOP__exercises
         {
             personalarray.Add(item);
         }
+
         public void InsertItem(int index, dynamic value)
         {
             personalarray.Insert(index, value);
         }
+
         public void RemoveItem(dynamic item)
         {
             personalarray.Remove(item);
@@ -29,6 +31,7 @@ namespace OOP__exercises
                 Console.WriteLine(item);
             }
         }
+
         public void GetEvenNumbers(ArrayList list)
         {
             for (int i = 0; i < list.Count; i++)
@@ -39,6 +42,7 @@ namespace OOP__exercises
                 };
             }
         }
+
         public void PrintList1(dynamic list)
         {
             foreach (dynamic item in list)
@@ -47,7 +51,31 @@ namespace OOP__exercises
             }
         }
     }
+    // Hash Tables 
+    class HashTable1
+    {
+        private Hashtable table = new Hashtable();
+        public void AddItem(dynamic key, dynamic value)
+        {
+            table.Add(key, value);
+        }
+        public void RemoveItem(dynamic key)
+        {
+            table.Remove(key);
+        }
+        public void PrintValue(dynamic key)
+        {
+            Console.WriteLine($"{key} : {table[key]}");
+        }
+        public void PrintTable()
+        {
+            foreach (DictionaryEntry entry in table)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", entry.Key, entry.Value);
+            }
+        }
 
+    }
     public class Collections
     {
         private static void Main()
@@ -81,11 +109,21 @@ namespace OOP__exercises
             list.Add(22);
             arrayList1.GetEvenNumbers(list);
             arrayList1.PrintList1(arrayList1.evenNumbersList);
-
+            // HashTable class 
+            HashTable1 hashTable1 = new HashTable1();
+            hashTable1.AddItem("name", "Ali Hassan");
+            hashTable1.AddItem("age", 12);
+            hashTable1.AddItem("Teacher", false);
+            hashTable1.AddItem("class", "BSSE-A");
+            hashTable1.AddItem("Phone", 03133324617);
+            hashTable1.AddItem("cgpa", 3.3);
+            hashTable1.AddItem("distance", 120.6);
+            hashTable1.RemoveItem("distance");
+            hashTable1.PrintValue("cgpa");
+            hashTable1.PrintTable();
 
 
 
         }
-
     }
 }
