@@ -6,7 +6,7 @@
     <RootNamespace>OOP__exercises</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>OOP__exercises._20_Generics</StartupObject>
+    <StartupObject>OOP__exercises.Collections</StartupObject>
   </PropertyGroup>
 
 </Project>
