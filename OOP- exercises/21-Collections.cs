@@ -76,6 +76,24 @@ namespace OOP__exercises
         }
 
     }
+    // Sorted list 
+    class SortList1
+    {
+        SortedList sortedList = new SortedList();
+        public void AddItem(dynamic key, dynamic value)
+        {
+            sortedList.Add(key, value);
+        }
+        public void PrintItems()
+        {
+            foreach (DictionaryEntry item in sortedList)
+            {
+                Console.WriteLine($"Key : {item.Key} Value : {item.Value}");
+            }
+
+        }
+
+    }
     public class Collections
     {
         private static void Main()
@@ -121,6 +139,17 @@ namespace OOP__exercises
             hashTable1.RemoveItem("distance");
             hashTable1.PrintValue("cgpa");
             hashTable1.PrintTable();
+
+            // Sorted list 
+
+            SortList1 sortList1 = new SortList1();
+            sortList1.AddItem("name", "amjad abbas");
+            sortList1.AddItem("age", "21");
+            sortList1.AddItem("class", "BSSE-A");
+            sortList1.AddItem("phone", 03132345678);
+            sortList1.PrintItems();
+
+
 
 
 
