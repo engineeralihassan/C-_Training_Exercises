@@ -9,14 +9,14 @@
             {
                 if (i == number)
                 {
-                    Console.WriteLine("Contnue");
+                    Console.WriteLine("Contnue statement ");
                     continue;
                 }
                 Console.WriteLine(i);
 
                 if (i == 4)
                 {
-                    Console.WriteLine("Terminate");
+                    Console.WriteLine("Terminate the loop ");
                     break;
                 }
 
