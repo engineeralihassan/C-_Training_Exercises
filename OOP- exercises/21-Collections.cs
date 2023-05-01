@@ -51,22 +51,27 @@ namespace OOP__exercises
             }
         }
     }
-    // Hash Tables 
-    class HashTable1
+
+    // Hash Tables
+    internal class HashTable1
     {
         private Hashtable table = new Hashtable();
+
         public void AddItem(dynamic key, dynamic value)
         {
             table.Add(key, value);
         }
+
         public void RemoveItem(dynamic key)
         {
             table.Remove(key);
         }
+
         public void PrintValue(dynamic key)
         {
             Console.WriteLine($"{key} : {table[key]}");
         }
+
         public void PrintTable()
         {
             foreach (DictionaryEntry entry in table)
@@ -74,42 +79,47 @@ namespace OOP__exercises
                 Console.WriteLine("Key: {0}, Value: {1}", entry.Key, entry.Value);
             }
         }
-
     }
-    // Sorted list 
-    class SortList1
+
+    // Sorted list
+    internal class SortList1
     {
-        SortedList sortedList = new SortedList();
+        private SortedList sortedList = new SortedList();
+
         public void AddItem(dynamic key, dynamic value)
         {
             sortedList.Add(key, value);
         }
+
         public void PrintItems()
         {
             foreach (DictionaryEntry item in sortedList)
             {
                 Console.WriteLine($"Key : {item.Key} Value : {item.Value}");
             }
-
         }
-
     }
+
     // None Genaric Stack
-    class Stack1
+    internal class Stack1
     {
         private Stack stack = new Stack();
+
         public void AddItem(dynamic item)
         {
             stack.Push(item);
         }
+
         public void DeleteItem()
         {
             stack.Pop();
         }
+
         public void GetTop()
         {
             stack.Peek();
         }
+
         public void IsContains(dynamic item)
         {
             string isContain = stack.Contains(item) ? "Yes" : "No";
@@ -121,12 +131,10 @@ namespace OOP__exercises
             foreach (object item in stack)
             {
                 Console.WriteLine(item);
-
             }
-
         }
-
     }
+
     public class Collections
     {
         private static void Main()
@@ -160,7 +168,7 @@ namespace OOP__exercises
             list.Add(22);
             arrayList1.GetEvenNumbers(list);
             arrayList1.PrintList1(arrayList1.evenNumbersList);
-            // HashTable class 
+            // HashTable class
             HashTable1 hashTable1 = new HashTable1();
             hashTable1.AddItem("name", "Ali Hassan");
             hashTable1.AddItem("age", 12);
@@ -173,7 +181,7 @@ namespace OOP__exercises
             hashTable1.PrintValue("cgpa");
             hashTable1.PrintTable();
 
-            // Sorted list 
+            // Sorted list
 
             SortList1 sortList1 = new SortList1();
             sortList1.AddItem("name", "amjad abbas");
@@ -182,7 +190,7 @@ namespace OOP__exercises
             sortList1.AddItem("phone", 03132345678);
             sortList1.PrintItems();
 
-            // Stack 
+            // Stack
 
             Stack1 stack = new Stack1();
             stack.AddItem("Ali Hassan");
@@ -229,12 +237,6 @@ namespace OOP__exercises
             Console.WriteLine($"\n\nDeleted Element: {queue.Dequeue()}");
             //Printing item after removing the first added item
             Console.WriteLine($"\nAll Queue Elements After Deletion: Count {queue.Count}");
-
-
-
-
-
-
         }
     }
 }
