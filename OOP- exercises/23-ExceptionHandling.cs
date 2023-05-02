@@ -74,9 +74,9 @@
                 throw new Exception("A number can not be divided by Zero");
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine(Exception.ReferenceEquals);
+
             }
             finally
             {
