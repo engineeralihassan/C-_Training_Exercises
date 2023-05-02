@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP__exercises
+﻿namespace OOP__exercises
 {
-    internal class _25_Boxing_Unboxing
+    internal class Boxing_Unboxing
     {
+        static void Main()
+        {
+            Console.WriteLine("Boxing and unBoxing in c#");
+            int i = 1;
+            Console.WriteLine(i);
+            object o = i; // boxing  
+            Console.WriteLine(i);
+            int j = (int)o; // unboxing  
+            Console.WriteLine(j);
+        }
     }
 }
