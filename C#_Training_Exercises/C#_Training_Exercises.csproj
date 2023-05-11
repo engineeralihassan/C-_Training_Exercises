@@ -6,7 +6,7 @@
     <RootNamespace>C__Training_Exercises</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>C__Training_Exercises.BreakContinue</StartupObject>
+    <StartupObject>C__Training_Exercises.Example2AsyncAwait</StartupObject>
   </PropertyGroup>
 
 </Project>
